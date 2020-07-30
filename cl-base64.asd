@@ -32,7 +32,7 @@
   (operate 'load-op 'cl-base64-tests)
   (operate 'test-op 'cl-base64-tests :force t))
 
-(defsystem cl-base64-tests
+(defsystem cl-base64/test
     :depends-on (cl-base64 ptester kmrcl)
     :components
     ((:file "tests")))
