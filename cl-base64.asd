@@ -37,8 +37,8 @@
     :components
     ((:file "tests")))
 
-(defmethod perform ((o test-op) (c (eql (find-system 'cl-base64-tests))))
-  (operate 'load-op 'cl-base64-tests)
+(defmethod perform ((o test-op) (c (eql (find-system 'cl-base64/test))))
+  (operate 'load-op 'cl-base64/test)
   (or (funcall (intern (symbol-name '#:do-tests)
-		       (find-package '#:cl-base64-tests)))
+		       (find-package '#:cl-base64/test)))
       (error "test-op failed")))
